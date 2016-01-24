@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ConsentText</key>
+	<dict>
+		<key>default</key>
+		<string>APN</string>
+	</dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>APNs</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>{{ data.name }}</string>
+					{% if data.username %}
+					<key>Username</key>
+					<string>{{ data.username }}</string>
+					{% endif %}
+					{% if data.password %}
+					<key>Password</key>
+					<string>{{ data.password }}</string>
+					{% endif %}
+					<key>ProxyPort</key>
+					<integer>{{ data.port }}</integer>
+					<key>ProxyServer</key>
+					<string>{{ data.proxy_ip }}</string>
+
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Configures a custom APN.</string>
+			<key>PayloadDisplayName</key>
+			<string>Cellular</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.cellular.{{ data.uuid }}</string>
+			<key>PayloadType</key>
+			<string>com.apple.cellular</string>
+			<key>PayloadUUID</key>
+			<string>{{ data.uuid }}</string>
+			<key>PayloadVersion</key>
+			<real>1</real>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>apn</string>
+	<key>PayloadDisplayName</key>
+	<string>apn</string>
+	<key>PayloadIdentifier</key>
+	<string>apn.{{ data.uuid }}</string>
+	<key>PayloadOrganization</key>
+	<string>APN</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>{{ data.uuid }}</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
