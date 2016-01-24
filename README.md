@@ -11,6 +11,6 @@ a flask fork of [APNManager](https://github.com/realityone/APNManager)
 
 然后浏览器访问：  http://127.0.0.1:5000/
 
-APN 搭建教程见[iOS-APN-across-the-great-fire-wall](iOS-APN-across-the-great-fire-wall)
+APN 搭建教程见[iOS-APN-across-the-great-fire-wall](https://lazymind.me/2016/01/iOS-APN-across-the-great-fire-wall/)
 
 
